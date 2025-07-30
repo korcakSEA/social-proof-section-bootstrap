@@ -38,10 +38,6 @@ body {
 
     line-height: 1.5;
 
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-
     background-image: url("./images/bg-pattern-top-mobile.svg"),
                       url("./images/bg-pattern-bottom-mobile.svg");
     background-repeat: no-repeat, no-repeat;
@@ -49,15 +45,24 @@ body {
     background-size: auto, 100vh 50vh;
 }
 
+blockquote, blockquote  p{
+    margin-bottom: 0 !important;
+}
+
+
 /***** Global Styling *****/
 
 .container {
     width: min(87%, 69.375rem);
     padding-inline: 0 ;
+
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
 }
 
-blockquote, blockquote  p{
-    margin-bottom: 0 !important;
+.ratings-container{
+    padding-inline: 0;
 }
 
 
@@ -105,12 +110,16 @@ blockquote, blockquote  p{
     padding-inline: 0 !important;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     body {
         background-image: url("./images/bg-pattern-top-desktop.svg"),
                           url("./images/bg-pattern-bottom-desktop.svg");
         background-position: top left, bottom right;
         background-size: auto, auto;
+    }
+
+    .testimonial-container > div{
+        height: 265px;
     }
 
     .ratings{
